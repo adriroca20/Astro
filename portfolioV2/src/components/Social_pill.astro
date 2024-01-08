@@ -1,0 +1,17 @@
+---
+interface Props {
+	RRSS_Name: string;
+    RRSS_Link: string;
+}
+
+const { RRSS_Name, RRSS_Link } = Astro.props;
+---
+<a 
+href={RRSS_Link} 
+class="flex gap-2 justify-center items-center rounded-full border-white/10 border py-2 px-4 bg-white/5 hover:bg-white/20 transition"
+target="_blank"
+rel="noopener noreferrer"
+>
+    {RRSS_Name}
+   <slot/>
+</a>

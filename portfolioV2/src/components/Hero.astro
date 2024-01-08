@@ -1,27 +1,34 @@
 ---
 import Badge from "./Badge.astro";
+import RRSSButtons from "./RRSS_Buttons.astro";
 ---
-<section class="w-full lg:w-[740px] mx-auto py-28 flex gap-6 flex-col">
-    <img 
-    class="rounded-full w-12 h-12 object-cover object-top"
-    src="/profile_picture.jpg" 
-    alt="Adrian Rocafull profile picture">
 
-    <h1 class="text-white text-5xl font-bold relative w-fit tracking-wide">
-        Hey, I'm Adrian 
-        <a href="https://www.linkedin.com/in/adri%C3%A1n-rocafull-448a1216a/" target="_blank" rel="noopener">
+<section class="w-full lg:w-[740px] mx-auto py-28 flex gap-6 flex-col">
+    <img
+        class="rounded-full w-12 h-12 object-cover object-top"
+        src="/profile_picture.jpg"
+        alt="Adrian Rocafull profile picture"
+    />
+    <header class="flex justify-start items-start gap-2">
+        <h1 class="text-white text-5xl font-bold tracking-wide">
+            Hey, I'm Adrian Rocafull
+        </h1>
+        <a
+            href="https://www.linkedin.com/in/adri%C3%A1n-rocafull-448a1216a/"
+            target="_blank"
+            rel="noopener"
+            class="flex items-start content-start flex-column h-full"
+        >
             <Badge>Available for hire</Badge>
         </a>
-    </h1>
+    </header>
+
     <h2 class="text-2xl opacity-80 text-wrap">
-        
-        2 years of experience. 
+        2 years of experience.
         <span class="text-yellow-200/90">Full Stack Web Developer.</span>
-        <br>
-        From Valencia, Spain ☀️. 
-        Specialiced in creating unique and sustainable solutions. 
+        <br />
+         From Valencia, Spain ☀️. Specialiced in creating unique and sustainable
+        solutions.
     </h2>
-    <ul>
-        <li></li>
-    </ul>
+    <RRSSButtons />
 </section>
