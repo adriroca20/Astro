@@ -17,11 +17,11 @@ const { date, title,description, location } = Astro.props;
         class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
         >{date}</time
     >
-    <header class="flex justify-start items-center gap-3">
-        <h3 class="text-lg font-semibold text-white-900 dark:text-white">
+    <header class="sm:flex md:justify-start sm:items-center gap-3">
+        <h3 class="sm:text-lg font-semibold text-white-900 dark:text-white">
             {title}
         </h3>
-        <span> - </span>
+        <span class="hidden md:block"> - </span>
         <h3 class="text-lg font-semibold text-yellow-200/90">
             {location}
         </h3>
