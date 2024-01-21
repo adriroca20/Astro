@@ -1,0 +1,31 @@
+---
+import User from "src/icons/User.astro";
+
+
+---
+<header id="about-me" class="flex content-start items-end gap-2 mb-8">
+    <User class="size-8"></User>
+   <h1 class="text-2xl font-bold">About me</h1>
+</header>
+<section  class="flex gap-x-8 justify-between items-center">
+    <div class="flex flex-col gap-3 w-[50%] [&>p]:text-balance [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold">
+        <h2>Hi! I'm Adrian Rocafull.</h2>
+        <p> I still remember when that teacher, Roberto,
+            showed us how to print our first "Hello world" using C.
+            Now, after an <strong>scholar's degree on computer science</strong>, I'm working as a <strong>full-stack developer</strong> 
+            and facing amazing challenges daily.
+        </p>
+        <p>
+            I have been part of multiple <strong>Hackathons in Valencia</strong>, like IDays and The Challenge VDS2023.
+            My enthusiasm for this field leads me to <strong>read programming-related newsletters</strong> and <strong>build projects on my own</strong> in order to keep me up to date.
+        </p>
+        <p>
+            Last but not least, <strong>I love reading</strong>, mostly fantasy books written by authors like Brandon Sanderson or Patrick Rothfuss.
+        </p>
+    </div>
+    <img
+        class="rounded-lg h-[30rem] w-[20rem] object-cover object-center shadow-sm shadow-yellow-400"
+        src="/profile_picture.jpg"
+        alt="Adrian Rocafull profile picture"
+    />
+</section>
