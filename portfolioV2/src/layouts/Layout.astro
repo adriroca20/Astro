@@ -1,10 +1,10 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import "@fontsource-variable/onest"
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -12,47 +12,50 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="es" class="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="absolute top-0 z-[-2] h-full w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-		<Header></Header>
-		<slot />
-		<Footer></Footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div
+      class="absolute top-0 z-[-2] h-full w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(60,60,100,0.2))]"
+    >
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-	:root {
-		color-scheme: light dark;
-	}
-	html {
-		font-family: "Onest Variable", system-ui, sans-serif;
-		background-color: #050505;
-		min-height: 100vh;
-		scroll-behavior: smooth;
-		scroll-padding-top: 90px;
-	}
-	body{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		position: relative;
-	}
-	@media (prefers-reduced-motion:reduce){
-		html{
-			scroll-behavior: auto;
-		}
-	}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    background-color: #050505;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 </style>
