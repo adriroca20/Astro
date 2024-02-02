@@ -1,8 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "paths": {
-    "@components/*": ["src/components/*"],
-    "@interfaces/*": ["src/interfaces/*"],
-    "@icons/*": ["src/icons/*"]
+  "compilerOptions": {
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@icons/*": ["./src/icons/*"]
+    }
   }
 }
