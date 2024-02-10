@@ -24,7 +24,7 @@
     <input type="checkbox" name="selectOption" id="{title}" class="hidden" on:click={(e)=>toggleSelectedOption(e)}/>
     <label for="{title}" class="absolute top-0 left-0 h-full w-full cursor-pointer"></label>
     <slot  class="flex-grow"/>
-    <span>{title}</span>
+    <span class="text-nowrap">{title}</span>
 </article>
 
 <style>
