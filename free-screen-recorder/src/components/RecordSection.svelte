@@ -5,29 +5,41 @@
   import SpeakerIcon from "../icons/SpeakerIcon.svelte";
   import MicrophoneIcon from "../icons/MicrophoneIcon.svelte";
   import CameraVideo from "../icons/CameraVideo.svelte";
-  const recordingOptions: any = {
-    Screen: false,
-    Camera: false,
-    Microphone: false,
-    "System Sound": false,
+  interface IRecordingOptions{
+    screen:boolean,
+    camera:boolean,
+    microphone:boolean,
+    systemSound:boolean
+  }
+  const recordingOptions: IRecordingOptions = {
+    screen: false,
+    camera: false,
+    microphone: false,
+    systemSound: false,
   };
 
   function handleClick({ detail }: CustomEvent) {
-    console.log(detail);
     const title: string = detail.title;
-    recordingOptions[title] = detail.checked;
+    if(title == "Screen") recordingOptions.screen = detail.checked
+    if(title == "Camera") recordingOptions.camera = detail.checked
+    if(title == "Microphone") recordingOptions.microphone = detail.checked
+    if(title == "System sound") recordingOptions.systemSound = detail.checked
   }
   async function startRecording() {
-    console.log("Recording");
-    const media = await navigator.mediaDevices.getDisplayMedia({
-      audio: true,
-      video: { frameRate: { ideal: 30 } },
+    console.log("Recording", recordingOptions);
+    const devicesMedia = await navigator.mediaDevices.getDisplayMedia({
+      audio: recordingOptions.systemSound,
+      video: recordingOptions.screen && { frameRate: { ideal: 30 } },
     });
-    const mediaRecorder = new MediaRecorder(media, {
+    const userMedia = await navigator.mediaDevices.getUserMedia({
+        audio:recordingOptions.microphone,
+        video:recordingOptions.camera
+    })
+    const mediaRecorder = new MediaRecorder(devicesMedia, {
       mimeType: "video/webm;codecs=vp8,opus",
     });
     mediaRecorder.start();
-    const [video] = media.getVideoTracks();
+    const [video] = devicesMedia.getVideoTracks();
     video.addEventListener("ended", () => {
       mediaRecorder.stop();
     });
