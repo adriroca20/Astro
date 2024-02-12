@@ -4,7 +4,6 @@
     const eventDispatcher = createEventDispatcher();
     const toggleSelectedOption = (e:MouseEvent )=>{
         const checked:boolean = e.target.checked;
-        console.log(checked);
         eventDispatcher("toggleSelectedOption", {title,checked});
     }
 </script>
