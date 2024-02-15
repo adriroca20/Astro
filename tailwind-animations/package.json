@@ -4,7 +4,7 @@
   "description": "Tailwind CSS plugin to add animations to your websites",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "keywords": [
     "Tailwind",
@@ -14,7 +14,9 @@
   "author": "Adrian Rocafull Berbel",
   "license": "ISC",
   "devDependencies": {
-    "standard": "^17.1.0"
+    "@csstools/postcss-minify": "^1.1.0",
+    "standard": "^17.1.0",
+    "vitest": "^1.2.2"
   },
   "peerDependencies": {
     "tailwindcss": "^3.0.0"
