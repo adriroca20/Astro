@@ -1,13 +1,33 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import theme from "../../../src/theme.js";
+import Header from "../components/Header.astro"
+const { animation } = theme;
 ---
 
 <Layout title="Tailwind CSS plugin animations">
-	<main>
-		
-	</main>
+  <Header></Header>
+  <section class="max-w-5xl m-auto grid grid-cols-3 gap-4">
+    {
+      Object.keys(animation).map((animationKey) => {
+        return (
+          <article
+            class="relative col-span-1 rounded border border-gray-200 bg-white/10 backdrop-blur-sm transition-colors animate-duration-1000 hover:border-gray-400 hover:shadow"
+            data-class={animationKey}
+          >
+            <div class="flex h-full w-full flex-col items-center justify-center gap-4 p-4">
+              <span class="flex h-16 w-16 items-center justify-center rounded-md bg-zinc-600" />
+              <p class="text-sm font-semibold opacity-80">{animationKey}</p>
+            </div>
+            <button
+              aria-label={`Copy ${animationKey.split("-").join(" ")} animation`}
+              class="absolute right-2 top-2"
+            ></button>
+          </article>
+        );
+      })
+    }
+  </section>
 </Layout>
 
-<style>
-	
-</style>
+<style></style>
