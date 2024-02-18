@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+import animations from "../src/index"
+import theme from "../src/theme.js";
+
+const { animation } = theme;
+const safelist = Object.keys(animation).map((key)=>{
+	return `animate-${key}`
+})
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [animations],
+	safelist
 }

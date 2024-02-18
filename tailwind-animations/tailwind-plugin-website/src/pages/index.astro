@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import theme from "../../../src/theme.js";
-import Header from "../components/Header.astro"
+import Header from "../components/Header.astro";
 const { animation } = theme;
 ---
 
 <Layout title="Tailwind CSS plugin animations">
-  <Header></Header>
-  <section class="max-w-5xl m-auto grid grid-cols-3 gap-4">
+  <Header />
+  <section class="max-w-5xl w-full m-auto grid grid-cols-3 gap-4">
     {
       Object.keys(animation).map((animationKey) => {
         return (
@@ -22,7 +22,7 @@ const { animation } = theme;
             <button
               aria-label={`Copy ${animationKey.split("-").join(" ")} animation`}
               class="absolute right-2 top-2"
-            ></button>
+            />
           </article>
         );
       })
@@ -30,4 +30,17 @@ const { animation } = theme;
   </section>
 </Layout>
 
-<style></style>
+<script>
+  const articles = document.querySelectorAll("article");
+  articles.forEach((article) => {
+    const animationKey = article.getAttribute("data-class");
+    const animationClass = `animate-${animationKey}`;
+    const animatedBox = article.querySelector("span");
+    article.addEventListener("mouseenter", () => {
+      animatedBox.classList.add(animationClass);
+    });
+    article.addEventListener("mouseleave", () => {
+      animatedBox.classList.remove(animationClass);
+    });
+  });
+</script>
