@@ -7,6 +7,26 @@ const projects:IProjectItem[] = [
         tittle:"Twitch bot",
         description:"Twitch bot that detects when a command is written in Twitch chat and answer with a joke from an api",
         githubLink:"https://github.com/adriroca20/TwitchBot",
+    },
+    {
+        tittle:"Quizify",
+        description:"University's project developed in C# and using Firebase to store data. Using dessign patterns to improve the quality of the code.",
+        githubLink:""
+    },
+    {
+        tittle:"",
+        description:"",
+        githubLink:""
+    },
+    {
+        tittle:"",
+        description:"",
+        githubLink:""
+    },
+    {
+        tittle:"",
+        description:"",
+        githubLink:""
     }
 ]
 ---
@@ -15,11 +35,9 @@ const projects:IProjectItem[] = [
    <h1 class="text-2xl font-bold">Small projects</h1>
 </header>
 <section id="smallProjects" class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-gray-800 dark:bg-gray-800">
-    <ProjectItem projectItemData={projects[0]}></ProjectItem>
-    <ProjectItem projectItemData={projects[0]}></ProjectItem>
-    <ProjectItem  projectItemData={projects[0]}></ProjectItem>
-    <ProjectItem projectItemData={projects[0]}></ProjectItem>
-    <ProjectItem projectItemData={projects[0]}></ProjectItem>
-    <ProjectItem projectItemData={projects[0]}></ProjectItem>
-    <ProjectItem projectItemData={projects[0]}></ProjectItem>
+    {
+        projects.map((project)=>{
+            return (<ProjectItem projectItemData={project}></ProjectItem>)
+        })
+    }
 </section>
