@@ -1,7 +1,32 @@
-<header class="max-w-5xl m-auto flex justify-center items-center flex-col text-white z-10">
-    <h1 class="font-semibold text-4xl pt-10 pb-4 text-amber-500">Tailwind CSS animations</h1>
-    <h2 class="font-medium opacity-70">The plugin you needed!</h2>
-    <div class="">
-      <code>npm install @adrian_rocafull/tailwindcss-animations</code>
-    </div>
+---
+import CopyIcon from "../icons/CopyIcon.astro";
+---
+
+<header
+  class="max-w-5xl m-auto flex justify-center items-center flex-col gap-3 mb-6 text-white z-10"
+>
+  <h1 class="font-semibold text-3xl sm:text-4xl pt-10 pb-4 text-amber-500">
+    Tailwind CSS animations
+  </h1>
+  <h2 class="font-medium opacity-70">The plugin you needed!</h2>
+  <p class="text-[0.7rem] align-self w-full">1. Install the dependency</p>
+  <div
+    class="flex justify-center w-[90%] sm:w-full items-center gap-1 rounded bg-[#1e1e1e] py-2 pl-2 pr-2 text-center text-white backdrop-blur"
+  >
+    <code class="text-[0.7rem] text-nowrap sm:text-[1rem]"
+      >npm install @adrian_rocafull/tailwindcss-animations</code
+    >
+    <button
+      class="ring-offset-background focus-visible:ring-ring inline-flex size-7 items-center justify-center whitespace-nowrap rounded-full bg-white/10 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none"
+      ><CopyIcon /></button
+    >
+  </div>
+  <p class="text-[0.7rem] align-self w-full">2. Add your configuration</p>
+  <div class="flex w-[90%] sm:w-full items-center gap-x-2 rounded-xl bg-[#1e1e1e] py-3 pl-4 pr-4 text-center text-white backdrop-blur"> <pre class="flex text-left text-xs">            <pre class="astro-code dark-plus" style="background-color:#1E1E1E;color:#D4D4D4; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#C586C0">import</span><span style="color:#9CDCFE"> animations</span><span style="color:#C586C0"> from</span><span style="color:#CE9178"> '@adrian_rocafull/tailwind-animations'</span></span>
+    <span class="line"></span>
+    <span class="line"><span style="color:#C586C0">export</span><span style="color:#C586C0"> default</span><span style="color:#D4D4D4"> {</span></span>
+    <span class="line"><span style="color:#6A9955">  // ...rest of the options</span></span>
+    <span class="line"><span style="color:#9CDCFE">  plugins:</span><span style="color:#D4D4D4"> [</span><span style="color:#9CDCFE">animations</span><span style="color:#D4D4D4">],</span></span>
+    <span class="line"><span style="color:#D4D4D4">}</span></span></code></pre>
+              </pre> </div>
 </header>
