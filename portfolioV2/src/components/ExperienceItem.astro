@@ -8,7 +8,7 @@ interface Props {
 const { date, title,description, location } = Astro.props;
 ---
 
-<li class="mb-10 ms-4">
+<article class="mb-10 ms-4">
     <div
         class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
     >
@@ -17,7 +17,7 @@ const { date, title,description, location } = Astro.props;
         class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
         >{date}</time
     >
-    <header class="sm:flex md:justify-start sm:items-center gap-3">
+    <div class="sm:flex md:justify-start sm:items-center gap-3">
         <h3 class="sm:text-lg font-semibold text-white-900 dark:text-white">
             {title}
         </h3>
@@ -25,9 +25,9 @@ const { date, title,description, location } = Astro.props;
         <h3 class="text-lg font-semibold text-yellow-400/80">
             {location}
         </h3>
-    </header>
+    </div>
     <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
        {description}
     </p>
     <slot/>
-</li>
+</article>
