@@ -2,10 +2,11 @@
 import GitHub from "src/icons/GitHub.astro";
 import LinkButton from "./LinkButton.astro";
 import type {IMainProject} from "../interfaces/IProjectItem"
+import Carousel from "./Carousel.astro";
 interface Props {
     projectItemData: IMainProject
 }
-
+const images: string[] = ["src/media/JSQuiz1.png", "src/media/JSQuiz2.png", "src/media/JSQuiz3.png"]
 const {projectItemData} = Astro.props;
 const {image, title, description, tags, link, github} = projectItemData;
 ---
@@ -27,12 +28,13 @@ const {image, title, description, tags, link, github} = projectItemData;
         </li>
       ))}
     </ul>
-    <img
+    <Carousel carouselImages={images}></Carousel>
+    <!-- <img
       loading="lazy"
       class="rounded shadow-2xl shadow-white/10 aspect-video"
       src={image}
       alt={`Captura de pantalla del proyecto ${image}`}
-    />
+    /> -->
     <footer class="flex gap-x-4 items-end justify-start mt-4">
       {github && (
         <LinkButton href={github}>
