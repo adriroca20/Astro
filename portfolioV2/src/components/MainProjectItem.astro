@@ -6,9 +6,8 @@ import Carousel from "./Carousel.astro";
 interface Props {
     projectItemData: IMainProject
 }
-const images: string[] = ["src/media/JSQuiz1.png", "src/media/JSQuiz2.png", "src/media/JSQuiz3.png"]
 const {projectItemData} = Astro.props;
-const {image, title, description, tags, link, github} = projectItemData;
+const {title, description, tags, link, github, images} = projectItemData;
 ---
 
 <article>

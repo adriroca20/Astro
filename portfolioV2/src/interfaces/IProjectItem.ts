@@ -4,12 +4,12 @@ export interface IProjectItem {
     description: string
 }
 export interface IMainProject{
-    image:string, 
     title:string, 
     description:string, 
     tags:ITags[], 
     link:string, 
-    github?:string
+    github?:string,
+    images:string[]
 }
 interface ITags{
     name: string,

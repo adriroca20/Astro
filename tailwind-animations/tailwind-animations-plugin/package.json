@@ -1,7 +1,7 @@
 {
   "name": "@adrian_rocafull/tailwind-animations",
-  "version": "0.0.1",
-  "description": "Tailwind CSS plugin to add animations to your websites",
+  "version": "0.0.6",
+  "description": "The Tailwind Animations Plugin is a Tailwind CSS plugin that enables you to easily add animations to your components using Tailwind utility classes",
   "main": "./src/index.js",
   "scripts": {
     "test": "vitest"
@@ -16,12 +16,10 @@
   "devDependencies": {
     "@csstools/postcss-minify": "^1.1.0",
     "standard": "^17.1.0",
-    "vitest": "^1.2.2"
+    "vitest": "^1.2.2",
+    "postcss": "^8.4.35"
   },
   "peerDependencies": {
     "tailwindcss": "^3.0.0"
-  },
-  "dependencies": {
-    "postcss": "^8.4.35"
   }
 }
