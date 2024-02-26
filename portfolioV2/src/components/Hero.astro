@@ -3,31 +3,39 @@ import Badge from "./Badge.astro";
 import RRSSButtons from "./RRSS_Buttons.astro";
 ---
 
-<section id="home" class="w-full lg:w-[770px] mx-auto py-24 flex md:items-start gap-6 flex-col">
-    <img
-        class="rounded-full size-16 object-cover object-top"
-        src="/profile_picture.jpg"
-        alt="Adrian Rocafull profile picture"
-    />
-    <header id="home" class="flex justify-start items-start gap-2 animate-fade-in flex-col sm:flex-row">
-        <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide text-nowrap">
-            Hey, I'm Adrian Rocafull
-        </h1>
-        <a
-            href="https://www.linkedin.com/in/adri%C3%A1n-rocafull-448a1216a/"
-            target="_blank"
-            rel="noopener"
-            class="flex items-start content-start flex-column h-full"
-        >
-            <Badge>Available for hire</Badge>
-        </a>
-    </header>
+<section
+  id="home"
+  class="w-full lg:w-[770px] mx-auto py-24 flex md:items-start gap-6 flex-col"
+>
+  <a
+    href="https://www.linkedin.com/in/adri%C3%A1n-rocafull-448a1216a/"
+    target="_blank"
+    rel="noopener"
+    class="flex items-start content-start flex-column h-full"
+  >
+    <Badge>Available for hire</Badge>
+  </a>
 
-    <h2 class="text-2xl opacity-80 text-balance text-start">
-        2 years of experience.
-        <span class="text-yellow-400">Full Stack Developer and Tester.</span>
-         From Valencia, Spain ☀️. Specialiced in creating unique and sustainable
-        solutions.
-    </h2>
-    <RRSSButtons />
+  <header
+    id="home"
+    class="flex justify-center items-center gap-2 animate-fade-in flex-col sm:flex-row"
+  >
+    <h1
+      class="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide text-nowrap"
+    >
+      Hey, I'm Adrian Rocafull
+    </h1>
+    <img
+      class="rounded-full size-16 object-cover object-top"
+      src="/profile.webp"
+      alt="Adrian Rocafull profile picture"
+    />
+  </header>
+
+  <h2 class="text-2xl opacity-80 text-balance text-start">
+    2 years of experience.
+    <span class="text-yellow-400">Full Stack Developer and Tester.</span>
+    From Valencia, Spain ☀️. Specialiced in creating unique and sustainable solutions.
+  </h2>
+  <RRSSButtons />
 </section>
