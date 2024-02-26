@@ -2,23 +2,59 @@
 import Code from "src/icons/Code2.astro";
 import GitHub from "../icons/GitHub.astro"
 import Tailwind from "../icons/Tailwind.astro"
-import LinkButton from "./LinkButton.astro"
+import JavaScript from "src/icons/JavaScript.astro";
+import TypeScript from "src/icons/TypeScript.astro"
+import CSS from "src/icons/CSS.astro"
+import AstroIcon from "src/icons/AstroIcon.astro";
+import Zustand from "src/icons/Zustand.astro"
 import MainProjectItem from "./MainProjectItem.astro";
+import React from "src/icons/React.astro";
+
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  JS: {
+    name: "JavaScript",
+    class: "bg-[#f0db4f66] text-white",
+    icon: JavaScript,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#30a9dc66] text-white",
+    icon: CSS,
+  },
+  TS: {
+    name: "TypeScript",
+    class: "bg-[#3178c64d] text-white",
+    icon: TypeScript,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#FFFFFF66] text-white",
+    icon: AstroIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#00D8FF66] text-white",
+    icon: React,
+  },
+  ZUSTAND: {
+    name: "Zustand",
+    class: "bg-[#70625766] text-white",
+    icon: Zustand,
+  },
 }
 const PROJECTS = [
   {
     title: "Javascript Quiz - A beautiful quiz about javascript",
     description:
-      `Javascript quiz developed with React, Typescript and Thustand as state manager for the application. It allows you to customize the quiz and download a dinamycally generated image with the result of the test.`,
+      `Javascript quiz developed with react, typescript and zustand as state manager for the application. It allows you to customize the quiz and download a dinamycally generated image with the result of the test.`,
     link: "https://svgl.vercel.app/",
     github: "https://github.com/adriroca20/JavascriptQuizz",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.TS, TAGS.JS, TAGS.CSS, TAGS.ASTRO, TAGS.REACT, TAGS.ZUSTAND],
     images: ["src/media/JSQuiz1.webp", "src/media/JSQuiz2.webp", "src/media/JSQuiz3.webp"]
   },
   {
