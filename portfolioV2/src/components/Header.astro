@@ -4,7 +4,7 @@ import Cross from "src/icons/Cross.astro"
 ---
 
 <header
-  class="flex justify-start items-start h-[70px] p-3 w-full md:w-[800px] xl:w-[810px]
+  class="flex justify-start items-start md:justify-center md:items-center h-[70px] p-3 w-full md:w-[800px] xl:w-[810px]
     fixed top-0 right-0 sm:right-auto z-[99999] bg-[#181822f1] text-[#e5ebf3]
     rounded-b-xl border-b border-[#ffffff60]
     transition-all duration-500
@@ -44,7 +44,6 @@ import Cross from "src/icons/Cross.astro"
 
 <script>
   const openButton = document.querySelector("#open-button");
-import type { Code } from "astro:components";
   const header = document.querySelector("header");
   const links = document.querySelectorAll("header a")
   const iconsNavbar = openButton?.querySelectorAll("svg")
