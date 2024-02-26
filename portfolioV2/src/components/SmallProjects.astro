@@ -1,48 +1,61 @@
 ---
 import Code from "../icons/Code.astro";
 import ProjectItem from "./SmallProjectItem.astro";
-import type {IProjectItem} from "@interfaces/IProjectItem";
-const projects:IProjectItem[] = [
+import type { IProjectItem } from "@interfaces/IProjectItem";
+const projects: IProjectItem[] = [
     {
-        tittle:"Twitch bot",
-        description:"Twitch bot that detects when a command is written in Twitch chat and answer with a joke from an api",
-        githubLink:"https://github.com/adriroca20/TwitchBot",
+        tittle: "Angular e-commerce & testing",
+        description:
+            "Ecommerce build on Angular. I learned how to use properly RXJS, creating a functional cart and sales. I also created a unit test for each function, using Jest.",
+        githubLink: "",
     },
     {
-        tittle:"Quizify",
-        description:"University's project developed in C# and using Firebase to store data. Using dessign patterns to improve the quality of the code.",
-        githubLink:""
+        tittle: "Free screen recorder",
+        description:
+            "Web application that allows the user to record their screen, audio and webcam according to the configuration that the user selected. Developed with Astro and Tailwind",
+        githubLink:
+            "https://github.com/adriroca20/Astro/tree/main/free-screen-recorder",
     },
     {
-        tittle:"Frontend architecture",
-        description:"Here I developed some projects to lear about frontend architecture, design patterns and state management. I used NGRX and Redux.",
-        githubLink:"https://github.com/adriroca20/Frontend-architecture"
+        tittle: "Frontend architecture",
+        description:
+            "Here I developed some projects to learn about frontend architecture, design patterns and state management. Mainly focused on redux, NGRX and Zustand.",
+        githubLink: "https://github.com/adriroca20/Frontend-architecture",
     },
     {
-        tittle:"Technical programming challenges",
-        description:"",
-        githubLink:""
+        tittle: "Jokes twitch bot",
+        description:
+            "This bot is able to detect when a command had been written in the Twitch chat. Then, it will answer with a different joke every time.",
+        githubLink: "https://github.com/adriroca20/TwitchBot",
     },
     {
-        tittle:"Angular m and testing",
-        description:"Ecommerce build on Angular. I learned how to use properly RXJS, creating a functional cart and sales. I also created a unit test for each function, using Jest.",
-        githubLink:""
+        tittle: "Quizify",
+        description:
+            "University's project developed in C# and using Firebase to store data. Applied dessign patterns, such as the facade and factory patterns to improve the quality of the code.",
+        githubLink: "",
     },
+
     {
-        tittle:"Angular advanced animations",
-        description:"Angular page with multiple components that you can copy and paste with custom animations using CSS.",
-        githubLink:"https://github.com/adriroca20/Web/tree/main/advanced-animations"
-    }
-]
+        tittle: "Angular advanced animations",
+        description:
+            "Angular page with multiple components that you can copy and paste with custom animations using CSS.",
+        githubLink:
+            "https://github.com/adriroca20/Web/tree/main/advanced-animations",
+    },
+];
 ---
+
 <header id="smallProjects" class="flex content-start items-end gap-2 mb-8">
-    <Code></Code>
-   <h1 class="text-2xl font-bold">Small projects</h1>
+    <Code />
+    <h1 class="text-2xl font-bold">Small projects</h1>
 </header>
-<section id="smallProjects" class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-gray-800 dark:bg-gray-800">
+<section
+    id="smallProjects"
+    class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-gray-800 dark:bg-gray-800"
+>
     {
-        projects.map((project)=>{
-            return (<ProjectItem projectItemData={project}></ProjectItem>)
+        projects.map((project) => {
+            return <ProjectItem projectItemData={project} />;
         })
     }
 </section>

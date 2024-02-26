@@ -3,13 +3,13 @@
 ---
 
 <header
-  class="flex justify-center items-center h-[70px] p-3 w-full xl:w-[810px]
+  class="flex justify-center items-center h-[70px] p-3 w-full md:w-[800px] xl:w-[810px]
     sticky top-0 left-0 z-[99999] bg-[#1818224d] text-[#e5ebf3]
     rounded-b-xl border-b border-[#ffffff60]
     transition-all duration-300"
 >
   <nav
-    class="flex w-full justify-between align-items-center gap-11 opacity-80 text-xl"
+    class="hidden md:flex sm:w-full sm:justify-between sm:align-items-center sm:gap-11 sm:opacity-80 sm:text-xl"
   >
     <a href="#home" aria-label="home">Home</a>
     <a href="#experience" aria-label="experience">Experience</a>
@@ -18,48 +18,46 @@
     <a href="#about-me" aria-label="about-me">About</a>
     <a href="#contact" aria-label="contact">Contact</a>
   </nav>
+  <nav class="flex justify-between items-center w-full flex-wrap md:hidden">
+    <a href="#home" aria-label="home">Home</a>
+    <button id="open-button">Hamburguer</button>
+    <div
+      id="items-sm-navbar"
+      class="fixed top-0 left-0 h-0 w-0 overflow-hidden flex justify-center items-center flex-col bg-[#14141cf5] gap-5 text-2xl duration-500"
+    >
+      <button id="close-button" class="absolute top-5 right-5">Close</button>
+      <a href="#home" aria-label="home">Home</a>
+      <a href="#experience" aria-label="experience">Experience</a>
+      <a href="#mainProjects" aria-label="mainProjects">Main projects</a>
+      <a href="#smallProjects" aria-label="smallProjects">Small projects</a>
+      <a href="#about-me" aria-label="about-me">About</a>
+      <a href="#contact" aria-label="contact">Contact</a>
+    </div>
+  </nav>
 </header>
 
 <script>
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500");
-            } else {
-              item.classList.remove("text-yellow-500");
-            }
-          });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.6,
-    });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section);
-        });
-      }
-    };
+  const openButton = document.querySelector("#open-button");
+  const closeButton = document.querySelector("#close-button");
+  const itemsContainer = document.querySelector("#items-sm-navbar");
+  const links = document.querySelectorAll("#items-sm-navbar a")
+  closeButton?.addEventListener("click", () => {
+    itemsContainer?.classList.remove("h-screen");
+    itemsContainer?.classList.remove("w-full");
+    itemsContainer?.classList.add("w-0");
+    itemsContainer?.classList.add("h-0");
   });
+  openButton?.addEventListener("click", () => {
+    itemsContainer?.classList.remove("h-0");
+    itemsContainer?.classList.add("h-screen");
+    itemsContainer?.classList.add("w-full");
+  });
+  links.forEach((link)=>{
+    link.addEventListener("click", ()=>{
+      itemsContainer?.classList.remove("h-screen");
+      itemsContainer?.classList.add("h-0");
+    })
+  })
 </script>
 <style>
   header {

@@ -9,7 +9,12 @@ import AstroIcon from "src/icons/AstroIcon.astro";
 import Zustand from "src/icons/Zustand.astro"
 import MainProjectItem from "./MainProjectItem.astro";
 import React from "src/icons/React.astro";
-
+import Vitest from "src/icons/Vitest.astro";
+import Angular from "src/icons/Angular.astro";
+import NET from "src/icons/NET.astro";
+import SQL from "src/icons/SQL.astro";
+import Azure from "src/icons/Azure.astro";
+import Django from "src/icons/Django.astro";
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
@@ -46,6 +51,36 @@ const TAGS = {
     class: "bg-[#70625766] text-white",
     icon: Zustand,
   },
+  VITEST: {
+    name: "Vitest",
+    class: "bg-[#FCC72B66] text-white",
+    icon: Vitest,
+  },
+  ANGULAR:{
+    name: "Angular",
+    class: "bg-[#dd003166] text-white",
+    icon: Angular,
+  },
+  NET:{
+    name: ".Net",
+    class: "bg-[#a179dc66] text-white",
+    icon: NET,
+  },
+  SQL:{
+    name: "Microsoft SQL Server",
+    class: "bg-[#cfd8dc66] text-white",
+    icon: SQL,
+  },
+  AZURE:{
+    name: "Microsoft Azure",
+    class: "bg-[#114a8b66] text-white",
+    icon: Azure,
+  },
+  DJANGO:{
+    name: "Django REST framework",
+    class: "bg-[#44b78b66] text-white",
+    icon: Django,
+  },
 }
 const PROJECTS = [
   {
@@ -54,7 +89,7 @@ const PROJECTS = [
       `Javascript quiz developed with react, typescript and zustand as state manager for the application. It allows you to customize the quiz and download a dinamycally generated image with the result of the test.`,
     link: "https://svgl.vercel.app/",
     github: "https://github.com/adriroca20/JavascriptQuizz",
-    tags: [TAGS.TS, TAGS.JS, TAGS.CSS, TAGS.ASTRO, TAGS.REACT, TAGS.ZUSTAND],
+    tags: [TAGS.TS, TAGS.CSS, TAGS.REACT, TAGS.ZUSTAND],
     images: ["src/media/JSQuiz1.webp", "src/media/JSQuiz2.webp", "src/media/JSQuiz3.webp"]
   },
   {
@@ -62,23 +97,26 @@ const PROJECTS = [
     description:
       "Plugin and website for tailwind CSS animations. Created more than 70 animations, tested with vitest and published in NPM. Then, I built a website to easily show and copy with one click all the classes added in this plugin.",
     link: "https://adventjs.dev",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.TAILWIND, TAGS.ASTRO, TAGS.VITEST],
     images: ["src/media/TailwindAnimations1.webp", "src/media/TailwindAnimations2.webp"]
   },
   {
-    title: "Envoy2 & Tracker - +70 CSS animations added to Tailwind CSS classes",
-    description:
-      "Plugin and website for tailwind CSS animations. Created more than 70 animations, tested with vitest and published in NPM. Then, I built a website to easily show and copy with one click all the classes added in this plugin.",
+    title: "Envoy2 & Tracker",
+    description:`
+      Envoy2 & Tracker are two applications created to track and manage the multiple movements of a big power company. Developed with
+      Angular and NGRX as state manager for the frontend and .Net on the backend. 
+    `,
     link: "https://adventjs.dev",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.ANGULAR, TAGS.CSS, TAGS.NET, TAGS.SQL, TAGS.AZURE],
     images: ["src/media/Tracker1.webp", "src/media/Tracker2.webp", "src/media/Tracker3.webp","src/media/Tracker4.webp"]
   },
   {
-    title: "Envoy2 & Tracker - +70 CSS animations added to Tailwind CSS classes",
+    title: "Twitter spaces transcriptor - Transcript your online calls",
     description:
-      "Plugin and website for tailwind CSS animations. Created more than 70 animations, tested with vitest and published in NPM. Then, I built a website to easily show and copy with one click all the classes added in this plugin.",
+    `Web application developed with Angular, tailwind and Django REST framework. Just by copying and pasting the Twitter spaces link, you 
+    will get the transcription according to the parameters that were chosen by the user.`,
     link: "https://adventjs.dev",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.DJANGO],
     images: ["src/media/TTranscriptor1.webp", "src/media/TTranscriptor2.webp"]
   },
 ]
