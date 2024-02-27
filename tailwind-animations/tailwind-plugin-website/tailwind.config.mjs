@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import animations from "../tailwind-animations-plugin/src/index.js"
-import theme from "../tailwind-animations-plugin/src/theme.js";
+import animations from "@adrian_rocafull/tailwind-animations"
+import theme from "./src/plugin-theme/theme.js";
 
 const { animation } = theme;
 const safelist = Object.keys(animation).map((key)=>{
