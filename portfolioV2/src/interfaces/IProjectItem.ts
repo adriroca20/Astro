@@ -7,7 +7,7 @@ export interface IMainProject{
     title:string, 
     description:string, 
     tags:ITags[], 
-    link:string, 
+    link?:string, 
     github?:string,
     images:string[]
 }

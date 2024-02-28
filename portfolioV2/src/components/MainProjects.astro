@@ -14,6 +14,8 @@ import NET from "src/icons/NET.astro";
 import SQL from "src/icons/SQL.astro";
 import Azure from "src/icons/Azure.astro";
 import Django from "src/icons/Django.astro";
+import Jest from "src/icons/Jest.astro";
+import Playwright from "src/icons/Playwright.astro";
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
@@ -80,22 +82,33 @@ const TAGS = {
     class: "bg-[#44b78b66] text-white",
     icon: Django,
   },
+  JEST:{
+    name: "Jest",
+    class: "bg-[#99425B66] text-white",
+    icon: Jest,
+  },
+  PLAYWRIGHT:{
+    name: "Playwright",
+    class: "bg-[#44b78b66] text-white",
+    icon: Playwright,
+  },
 }
 const PROJECTS = [
   {
-    title: "Javascript Quiz - A beautiful quiz about javascript",
+    title: "Javascript Quizz - A beautiful quizz about javascript",
     description:
       `Javascript quiz developed with react, typescript and zustand as state manager for the application. It allows you to customize the quiz and download a dinamycally generated image with the result of the test.`,
-    link: "https://svgl.vercel.app/",
+    link: "https://javascript-quizz-one.vercel.app/",
     github: "https://github.com/adriroca20/JavascriptQuizz",
-    tags: [TAGS.TS, TAGS.CSS, TAGS.REACT, TAGS.ZUSTAND],
+    tags: [TAGS.TS, TAGS.CSS, TAGS.REACT, TAGS.ZUSTAND, TAGS.VITEST],
     images: ["/JSQuiz1.webp", "/JSQuiz2.webp", "/JSQuiz3.webp"]
   },
   {
     title: "Tailwind CSS Animations - +70 CSS animations added to Tailwind CSS classes",
     description:
       "Plugin and website for tailwind CSS animations. Created more than 70 animations, tested with vitest and published in NPM. Then, I built a website to easily show and copy with one click all the classes added in this plugin.",
-    link: "https://adventjs.dev",
+    link: "https://tailwind-animations-eight.vercel.app/",
+    github:"https://github.com/adriroca20/Astro/tree/main/tailwind-animations",
     tags: [TAGS.TAILWIND, TAGS.ASTRO, TAGS.VITEST],
     images: ["/TailwindAnimations1.webp", "/TailwindAnimations2.webp"]
   },
@@ -105,8 +118,7 @@ const PROJECTS = [
       Envoy2 & Tracker are two applications created to track and manage the multiple movements of a big power company. Developed with
       Angular and NGRX as state manager for the frontend and .Net on the backend. 
     `,
-    link: "https://adventjs.dev",
-    tags: [TAGS.ANGULAR, TAGS.CSS, TAGS.NET, TAGS.SQL, TAGS.AZURE],
+    tags: [TAGS.ANGULAR, TAGS.CSS, TAGS.NET, TAGS.SQL, TAGS.AZURE, TAGS.JEST, TAGS.PLAYWRIGHT],
     images: ["/Tracker1.webp", "/Tracker2.webp", "/Tracker3.webp","/Tracker4.webp"]
   },
   {
@@ -114,7 +126,7 @@ const PROJECTS = [
     description:
     `Web application developed with Angular, tailwind and Django REST framework. Just by copying and pasting the Twitter spaces link, you 
     will get the transcription according to the parameters that were chosen by the user.`,
-    link: "https://adventjs.dev",
+    github: "https://github.com/adriroca20/Astro/tree/main/free-screen-recorder",
     tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.DJANGO],
     images: ["/TTranscriptor1.webp", "/TTranscriptor2.webp"]
   },

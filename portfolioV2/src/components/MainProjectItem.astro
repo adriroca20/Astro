@@ -41,6 +41,7 @@ const {title, description, tags, link, github, images} = projectItemData;
           Font code 
         </LinkButton>
       )}
+       {link && (
       <LinkButton href={link}>
         <svg
           width="24"
@@ -67,5 +68,7 @@ const {title, description, tags, link, github, images} = projectItemData;
         </svg>
         Go to website
       </LinkButton>
+       )}
+
     </footer>
   </article>
