@@ -1,0 +1,62 @@
+---
+import RichResults from "./RichResults.astro"
+
+interface Props {
+	title: string
+	description: string
+}
+const URL = "https://adrianrocafull.es"
+const { title, description } = Astro.props
+---
+
+<title>{title}</title>
+
+<meta charset="UTF-8" />
+<meta name="description" content={description} />
+
+<link rel="icon" type="image/webp" href="/favicon.webp" />
+<link rel="canonical" href={URL} />
+<meta name="viewport" content="width=device-width" />
+<meta name="theme-color" content="#fff" />
+
+<meta name="keywords" content="full stack, frontend, Valencia, Astro, Angular, React js, portfolio" />
+
+
+<meta name="og:image" content=`${URL}/ogImage.webp` />
+<meta name="og:title" content={title} />
+<meta name="og:description" content={description} />
+<meta name="og:url" content=`${URL}`/>
+<meta name="og:site_name" content="Fontaneria Rocafull" />
+<meta name="og:type" content="website" />
+<meta name="og:locale" content="es_ES" />
+
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<!-- PWA Support -->
+
+<!-- Favicons. -->
+<!-- 16 -->
+<link rel="icon" type="image/webp" sizes="16x16" href="/favicon.webp" />
+<!-- 20 -->
+<link rel="icon" type="image/webp" sizes="20x20" href="/favicon.webp" />
+<!-- 24 -->
+<link rel="icon" type="image/webp" sizes="24x24" href="/favicon.webp" />
+<!-- 48 -->
+<link rel="icon" type="image/webp" sizes="48x48" href="/favicon.webp" />
+<!-- 64 -->
+<link rel="icon" type="image/webp" sizes="64x64" href="/favicon.webp" />
+<!-- 128 -->
+<link rel="icon" type="image/webp" sizes="128x128" href="/favicon.webp" />
+<!-- 144 -->
+<link rel="icon" type="image/webp" sizes="144x144" href="/favicon.webp" />
+<!-- 256 -->
+<link rel="icon" type="image/webp" sizes="256x256" href="/favicon.webp" />
+<!-- 512 -->
+<link rel="icon" type="image/webp" sizes="512x512" href="/favicon.webp" />
+<link rel="shortcut icon" type="image/webp" href="/favicon.webp" />
+
+<!-- Sitemap -->
+<meta name="msapplication-config" content="/browserconfig.xml" />
+
+<RichResults />

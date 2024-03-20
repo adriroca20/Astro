@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import SEO from "../components/SEO.astro";
 import "@fontsource-variable/onest";
 interface Props {
   title: string;
@@ -13,13 +14,7 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="es" class="dark">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO description={description} title={title}></SEO>
   </head>
   <body>
     <div

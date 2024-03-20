@@ -1,0 +1,47 @@
+---
+const URL = "https://adrianrocafull.es";
+
+/** https://developers.google.com/search/docs/appearance/structured-data/organization */
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  url: `${URL}`,
+  image: `${URL}/favicon.webp`,
+  sameAs: [
+    "https://github.com/adriroca20",
+    "https://www.linkedin.com/in/adri%C3%A1n-rocafull-448a1216a/",
+  ],
+  dateCreated: "2013-12-23T12:34:00-05:00",
+  dateModified: "2014-03-19T14:53:00-05:00",
+  mainEntity: {
+    "@type": "Person",
+    name: "Adrian Rocafull",
+    alternateName: "adriroca20",
+    identifier: "123475623",
+    interactionStatistic: [
+      {
+        "@type": "InteractionCounter",
+        interactionType: "https://schema.org/FollowAction",
+        userInteractionCount: 1,
+      },
+      {
+        "@type": "InteractionCounter",
+        interactionType: "https://schema.org/LikeAction",
+        userInteractionCount: 5,
+      },
+    ],
+    agentInteractionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType: "https://schema.org/WriteAction",
+      userInteractionCount: 2346,
+    },
+    description: "2 years of experience. Full Stack Developer and Tester. From Valencia, Spain. Specialiced in creating unique and sustainable solutions. Soy Adrian Rocafull, desarrollador full stack, frontend y tester.",
+  },
+};
+---
+
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify(organizationSchema)}
+/>
