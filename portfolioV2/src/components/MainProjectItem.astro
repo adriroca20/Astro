@@ -27,7 +27,9 @@ const {title, description, tags, link, github, images} = projectItemData;
         </li>
       ))}
     </ul>
-    <Carousel carouselImages={images}></Carousel>
+    {
+      images.length > 1 ? <Carousel carouselImages={images}></Carousel> : <p class="text-sm py-5 text-yellow-300">Could not upload images due to privacy policies</p>
+    }
     <!-- <img
       loading="lazy"
       class="rounded shadow-2xl shadow-white/10 aspect-video"
