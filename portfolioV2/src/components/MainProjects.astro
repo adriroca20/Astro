@@ -1,11 +1,11 @@
 ---
 import Code from "src/icons/Code2.astro";
-import Tailwind from "../icons/Tailwind.astro"
+import Tailwind from "../icons/Tailwind.astro";
 import JavaScript from "src/icons/JavaScript.astro";
-import TypeScript from "src/icons/TypeScript.astro"
-import CSS from "src/icons/CSS.astro"
+import TypeScript from "src/icons/TypeScript.astro";
+import CSS from "src/icons/CSS.astro";
 import AstroIcon from "src/icons/AstroIcon.astro";
-import Zustand from "src/icons/Zustand.astro"
+import Zustand from "src/icons/Zustand.astro";
 import MainProjectItem from "./MainProjectItem.astro";
 import React from "src/icons/React.astro";
 import Vitest from "src/icons/Vitest.astro";
@@ -16,6 +16,9 @@ import Azure from "src/icons/Azure.astro";
 import Django from "src/icons/Django.astro";
 import Jest from "src/icons/Jest.astro";
 import Playwright from "src/icons/Playwright.astro";
+import Figma from "src/icons/Figma.astro";
+import Supabase from "src/icons/Supabase.astro";
+import AWS from "src/icons/AWS.astro";
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
@@ -57,91 +60,118 @@ const TAGS = {
     class: "bg-[#FCC72B66] text-white",
     icon: Vitest,
   },
-  ANGULAR:{
+  ANGULAR: {
     name: "Angular",
     class: "bg-[#dd003166] text-white",
     icon: Angular,
   },
-  NET:{
+  NET: {
     name: ".Net",
     class: "bg-[#a179dc66] text-white",
     icon: NET,
   },
-  SQL:{
+  SQL: {
     name: "Microsoft SQL Server",
     class: "bg-[#cfd8dc66] text-white",
     icon: SQL,
   },
-  AZURE:{
+  AZURE: {
     name: "Microsoft Azure",
     class: "bg-[#114a8b66] text-white",
     icon: Azure,
   },
-  DJANGO:{
+  DJANGO: {
     name: "Django REST framework",
     class: "bg-[#44b78b66] text-white",
     icon: Django,
   },
-  JEST:{
+  JEST: {
     name: "Jest",
     class: "bg-[#99425B66] text-white",
     icon: Jest,
   },
-  PLAYWRIGHT:{
+  PLAYWRIGHT: {
     name: "Playwright",
     class: "bg-[#44b78b66] text-white",
     icon: Playwright,
   },
-}
+  FIGMA: {
+    name: "Figma",
+    class: "bg-[#F24E1E66] text-white",
+    icon: Figma,
+  },
+  REACTNATIVE: {
+    name: "React Native",
+    class: "bg-[#61DAFB66] text-white",
+    icon: React,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-[#30a9dc66] text-white",
+    icon: Supabase,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-[#F9AB0066] text-white",
+    icon: AWS,
+  },
+};
 const PROJECTS = [
   {
-    title: "Javascript Quizz - A beautiful quizz about javascript",
-    description:
-      `Javascript quiz developed with react, typescript and zustand as state manager for the application. It allows you to customize the quiz and download a dinamycally generated image with the result of the test.`,
+    title: "Diariamente - Mobile application for psychologists",
+    description: `Mobile application that connects psychologists with patients.
+Patients upload mood logs during moments of anxiety, and their assigned psychologist can view these records.
+Designed and built from scratch using Figma, V0, React Native, and Supabase.`,
     link: "https://javascript-quizz-one.vercel.app/",
-    github: "https://github.com/adriroca20/JavascriptQuizz",
-    tags: [TAGS.TS, TAGS.CSS, TAGS.REACT, TAGS.ZUSTAND, TAGS.VITEST],
-    images: ["/JSQuiz1.webp", "/JSQuiz2.webp", "/JSQuiz3.webp"]
+    tags: [TAGS.SUPABASE, TAGS.REACTNATIVE, TAGS.FIGMA],
+    images: ["/Diariamente1.webp", "/Diariamente2.webp", "/Diariamente3.webp"],
   },
   {
-    title: "Tailwind CSS Animations - +70 CSS animations added to Tailwind CSS classes",
+    title: "OTT platform inspired by HBO and Netflix",
+    description: `Integrated with AWS services for authentication, database, and Lambda functions.
+Includes features such as geoblocking, per-user analytics, push notifications, subtitles, live chat, and support for multiple video and audio formats and quality levels.`,
+    github:
+      "https://github.com/adriroca20/Astro/tree/main/free-screen-recorder",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.AWS],
+    images: ["/OTT1.webp", "/OTT2.webp", "/OTT3.webp"],
+  },
+  {
+    title:
+      "Tailwind CSS Animations - +70 CSS animations added to Tailwind CSS classes",
     description:
       "Plugin and website for tailwind CSS animations. Created more than 70 animations, tested with vitest and published in NPM. Then, I built a website to easily show and copy with one click all the classes added in this plugin.",
     link: "https://tailwind-animations-eight.vercel.app/",
-    github:"https://github.com/adriroca20/Astro/tree/main/tailwind-animations",
+    github: "https://github.com/adriroca20/Astro/tree/main/tailwind-animations",
     tags: [TAGS.TAILWIND, TAGS.ASTRO, TAGS.VITEST],
-    images: ["/TailwindAnimations1.webp", "/TailwindAnimations2.webp"]
+    images: ["/TailwindAnimations1.webp", "/TailwindAnimations2.webp"],
   },
   {
-    title: "Twitter spaces transcriptor - Transcript your online calls",
-    description:
-    `Web application developed with Angular, tailwind and Django REST framework. Just by copying and pasting the Twitter spaces link, you 
-    will get the transcription according to the parameters that were chosen by the user.`,
-    github: "https://github.com/adriroca20/Astro/tree/main/free-screen-recorder",
-    tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.DJANGO],
-    images: ["/TTranscriptor1.webp", "/TTranscriptor2.webp"]
-  },
-  {
-    title: "Envoy2 & Tracker",
-    description:`
-      Envoy2 & Tracker are two applications created to track and manage the multiple movements of a big power company. Developed with
-      Angular and NGRX as state manager for the frontend and .Net on the backend. 
+    title: "Circulantis dashboard- Web application for operational management",
+    description: `
+      Web application developed for invoice generation, cost calculations, automated emails, user management, and other features related to Circulantis' operational management. 
     `,
-    tags: [TAGS.ANGULAR, TAGS.CSS, TAGS.NET, TAGS.SQL, TAGS.AZURE, TAGS.JEST, TAGS.PLAYWRIGHT],
-    images: [""]
+    tags: [
+      TAGS.REACT,
+      TAGS.CSS,
+      TAGS.FIGMA,
+      TAGS.SUPABASE,
+      TAGS.JEST,
+      TAGS.PLAYWRIGHT,
+    ],
+    images: [""],
   },
-]
+];
 ---
+
 <header id="mainProjects" class="flex content-start items-end gap-2 mb-8">
-    <Code></Code>
-   <h1 class="text-2xl font-bold">Main projects</h1>
+  <Code />
+  <h1 class="text-2xl font-bold">Main projects</h1>
 </header>
 
 <section id="mainProjects" class="flex flex-col gap-y-16 mb-14">
   {
     PROJECTS.map((project) => (
-       <MainProjectItem projectItemData={project}>
-        </MainProjectItem> 
+      <MainProjectItem projectItemData={project}></MainProjectItem>
     ))
   }
 </section>
